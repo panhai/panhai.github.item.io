@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>学员基本资料</title>
+<include file="./tpl_src/Home/Inc/head.html" />
+<link href="__PUBLIC__/css/student.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<include file="./tpl_src/Home/Inc/base.html" />
+
+<div class="layout-right" id="app">
+    <p class="breadcrumbs">
+        <i class="fa fa-map-marker"></i> <a href="/index.php/Home/Home">首页</a> &gt;
+        <span class="nav-one">{{statusString}}学员管理</span> &gt; 
+        <span class="nav-two">学员基本资料</span>
+    </p>
+
+    <div class="search-wp">
+        <form>
+            <span>模糊查找：</span><input type="text" class="w150" @keyup.enter="search" v-model.trim="key" placeholder="请输入您要搜索的内容">
+            <button type="button" class="btn1 mr20" @click="search">搜索</button>
+        </form>
+        <form class="mt20 mb20">
+            <select v-model="keys.specialty_id" class="px-130">
+                <option value="">请选择专业</option>
+                <option v-for="item in specialtyList" :value="item.id">{{item.name}}</option>
+            </select>
+            <select v-model="keys.specialty_level" class="ml10 mr10">
+                <option value="">请选择层次</option>
+                <option value="0">专科</option>
+                <option value="1">本科</option>
+            </select>
+            <select v-model="keys.modality">
+                <option value="">请选择上课形式</option>
+                <option value="0">日班</option>
+                <option value="1">晚班</option>
+                <option value="2">日晚班</option>
+            </select>
+            
+            <select v-model="keys.line_teach" class="ml10 mr10">
+                <option value="">网上课堂</option>
+                <option value="2">已开</option>
+                <option value="1">不用开</option>
+                <option value="0">未开</option>
+            </select>
+            <select v-model="keys.attend_ticket" class="mr10">
+                <option value="">听课证</option>
+                <option value="1">已发</option>
+                <option value="0">未发</option>
+            </select>
+            <select v-model="keys.q_colony" class="mr10">
+                <option value="">加Q群</option>
+                <option value="1">已加入</option>
+                <option value="0">未加入</option>
+            </select>
+            <select v-model="keys.w_public" class="mr10">
+                <option value="">微信公众号</option>
+                <option value="1">已关注</option>
+                <option value="0">未关注</option>
+            </select>
+            <span class="ml10">入学时间：</span>
+            <input type="text" class="w185 date" v-model="keys.academic_time" placeholder="请选择时间范围" readonly lay-key="1">
+            <button type="button" class="btn1 mr20" @click="complexSearch">搜索</button>
+        </form>
+    </div>
+    
+    <div style="height:63px;overflow:hidden;position: relative;">
+    <div class="scroll-head">
+        <!-- 需要显示出来的表头 -->
+        <table class="special-table">
+            <thead class="special-table-head">
+                <tr>
+                    <th><p class="px-50">选择</p></th>
+                    <th><p class="px-100">姓名</p></th>
+                    <th><p class="px-50">性别</p></th>
+                    <th><p class="px-100">专业</p></th>
+                    <th><p class="px-50">层次</p></th>
+                    <th><p class="px-100">入学时间</p></th>
+                    <th><p class="px-100">手机号码</p></th>
+                    <th><p class="px-120">准考证号</p></th>
+                    <th><p class="px-130">身份证号</p></th>
+                    <th>对应专业</th>
+                    <th><p class="px-100">QQ号码</p></th>
+                    <th>网上课堂</th>
+                    <th>听课证</th>
+                    <th>加Q群</th>
+                    <th>加微信群</th>
+                    <th>微信公众号</th>
+                    <th><p class="px-100">手机号码2</p></th>
+                    <th><p class="px-100">操作</p></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <!-- 表头固定的前5列 不会随着表格滚动 -->
+    <div class="virtual-head">
+        <p class="px-50">选择</p>
+        <p class="px-100">姓名</p>
+        <p class="px-50">性别</p>
+        <p class="px-100">专业</p>
+        <p class="px-50">层次</p>
+    </div>
+    </div>
+
+    <div style="position:relative;">
+    <div class="double-scroll">
+        <table class="special-table" style="margin-top:-59px;">
+            <!-- 需要隐藏的表头 -->
+            <thead class="special-table-head" style="visibility: hidden;">
+                <tr>
+                    <th>选择</th>
+                    <th>姓名</th>
+                    <th>性别</th>
+                    <th>专业</th>
+                    <th>层次</th>
+                    <th>入学时间</th>
+                    <th>手机号码</th>
+                    <th>准考证号</th>
+                    <th>身份证号</th>
+                    <th>对应专业</th>
+                    <th>QQ号码</th>
+                    <th>网上课堂</th>
+                    <th>听课证</th>
+                    <th>加Q群</th>
+                    <th>加微信群</th>
+                    <th>微信公众号</th>
+                    <th>手机号码2</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody class="special-table-body">
+                <tr v-for="(item,index) in list">
+                    <td><input type="checkbox" class="list-checkbox" :value="item.id" v-model="checked"></td>
+                    <td>
+                        <p class="px-100 text-ellipsis">
+                        <a class="name" :data-id="item.id" :data-specialty-id="item.specialty_id" v-if="item.lists_jurisdiction.edit" href="/index.php/Home/Student/edit.html" @click="edit(item.id,item.specialty_id)">{{ item.name }}</a>
+                        <span class="name" v-else>{{ item.name }}</span>
+                        </p>
+                    </td>
+                    <td class="px-50 gender">{{ item.sex | sex }}</td>
+                    <td><p class="px-100 specialty">{{ item.specialty_name }}</p></td>
+                    <td class="px-50 level">{{ item.specialty_level | level }}</td>
+                    <td><p class="px-100">{{ item.academic_time | time }}</p></td>
+                    <td><p class="px-100">{{ item.phone }}</p></td>
+                    <td><p class="px-120">{{ item.ticket }}</p></td>
+                    <td><p class="px-130">{{ item.id_card }}</p></td>
+                    <td>{{ item.specialty_matching | matching }}</td>
+                    <td><p class="px-100">{{ item.qq }}</p></td>
+                    <td>{{ item.line_teach | teach }}</td>
+                    <td>{{ item.attend_ticket | ticket }}</td>
+                    <td>{{ item.q_colony | colony }}</td>
+                    <td>{{ item.w_colony | colony }}</td>
+                    <td>{{ item.w_public | public }}</td>
+                    <td><p class="px-100">{{ item.standby_phone }}</p></td>
+                    <td class="operation">
+                        <p class="px-100">
+                        <a v-if="item.lists_jurisdiction.edit" href="/index.php/Home/Student/edit.html" @click="edit(item.id,item.specialty_id)">编辑</a>
+                        <span v-else class="c9">编辑</span>
+                        <a v-if="item.lists_jurisdiction.edit" href="/index.php/Home/Student/copy.html" @click="copy(item.id,item.specialty_id)">复制学员</a>
+                        <span v-else class="c9">复制学员</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 表体固定的前5列 不会随着表格滚动 -->
+    <div class="virtual-wp">
+        <div>
+            <table>
+                <!-- 数据由js动态生成插入 -->
+                <tbody class="virtual-body"></tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+                
+           
+    <div class="list-footer">
+        <p class="left">
+            <label class="btn1 mr10">
+                <input type="checkbox" v-model="allChecked">全选（{{checkedCount}}）
+            </label>
+            <button type="button" class="btn2" @click="exportData">导出学员</button>
+        </p>
+        <div class="right">
+            
+        </div>
+    </div>
+    
+   
+
+</div>
+
+<include file="./tpl_src/Home/Inc/footer.html" />
+<script src="__PUBLIC__/plugin/laydate/laydate.js"></script>
+<script src="__PUBLIC__/js/table.js"></script>
+<script src="__PUBLIC__/js/student.js"></script>
+
+</body>
+</html>

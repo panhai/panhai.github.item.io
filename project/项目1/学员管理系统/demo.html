@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<style type="text/css">
+			html{
+				font-size: 20px;
+			}
+			* {
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			li {
+				list-style: none;
+				float: left;
+				width: 120px;
+				height: 100%;
+				background-color: #CCCCCC;
+			}
+			
+			ul {
+				position: fixed;
+				width: 100%;
+				height: 80px;
+				left: 0px;
+				top: 0px;
+				border: 1px solid #CCCCCC;
+			}
+			
+			li a {
+				display: block;
+				width: 100%;
+				height: 100%;
+				line-height: 80px;
+				text-align: center;
+			}
+			
+			li a.active {
+				background-color: blue;
+				color: #fff;
+			}
+			
+			.p{
+				font-size: 1.2rem;
+				margin-top: 10rem;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<ul>
+			<li>
+				<a href="" class="active">导航1</a>
+			</li>
+			<li>
+				<a href="">导航2</a>
+			</li>
+			<li>
+				<a href="">导航3</a>
+			</li>
+			<li>
+				<a href="">导航4</a>
+			</li>
+			<li>
+				<a href="">导航5</a>
+			</li>
+			<li>
+				<a href="">导航6</a>
+			</li>
+		</ul>
+		<div style="width: 100%;height: 500px;border: 1px solid red;margin:0 auto">
+			<p class="p">觉得还记得</p>
+		</div>
+		<div class="list-footer">
+			<p class="left"><label class="btn1 mr10"><input type="checkbox">全选（0）
+            </label> <button type="button" class="all-del btn2">审核</button></p>
+			<div class="right">
+				<form class="page" action="/Api/FinanceCheck/getFinanceCheckLists/checking/xeh/if_check/0/is_page/true/limit/10" method="get"><span class="rows">共 420 条记录</span>
+					<a class="first" href="/Api/FinanceCheck/getFinanceCheckLists/checking/xeh/if_check/0/is_page/true/limit/10/p/1">首页</a>
+					<a class="prev" href="/Api/FinanceCheck/getFinanceCheckLists/checking/xeh/if_check/0/is_page/true/limit/10/p/14">上一页</a>
+					<a class="num" href="/Api/FinanceCheck/getFinanceCheckLists/checking/xeh/if_check/0/is_page/true/limit/10/p/13">13</a>
+					<a class="num" href="/Api/FinanceCheck/getFinanceCheckLists/checking/xeh/if_check/0/is_page/true/limit/10/p/14">14</a><span class="current">15</span>
+					<a class="num" href="/Api/FinanceCheck/getFinanceCheckLists/checking/xeh/if_check/0/is_page/true/limit/10/p/16">16</a>
+					<a class="num" href="/Api/FinanceCheck/getFinanceCheckLists/checking/xeh/if_check/0/is_page/true/limit/10/p/17">17</a>
+					<a class="next" href="/Api/FinanceCheck/getFinanceCheckLists/checking/xeh/if_check/0/is_page/true/limit/10/p/16">下一页</a>
+					<a class="end" href="/Api/FinanceCheck/getFinanceCheckLists/checking/xeh/if_check/0/is_page/true/limit/10/p/42">尾页</a> <span class="skip">跳到</span>
+					<input type="text" class="only-number" name="p" maxlength="4" value="15" required="">
+					<span class="skip">页</span>
+					<button type="button" class="btn2">确定</button>
+				</form>
+			</div>
+		</div>
+		
+		<script src="plug/jquery/jquery.min.js"></script>
+		<script type="text/javascript">
+			var domain = 'http://' + location.hostname; //全局域名
+			
+			
+			var p = $('p').css('font-size');
+			var a  =$('a').css('font-size');
+			
+			
+			console.log(p,a)
+		</script>
+	</body>
+
+</html>
