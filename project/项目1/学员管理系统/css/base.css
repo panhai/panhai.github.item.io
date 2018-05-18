@@ -188,6 +188,17 @@ select {
 	width: auto;
 	height: auto;
 }
+.containerMain .contentMain .title{
+	position: relative;
+}
+.contentMain .title .back{
+	color: #0000FF;
+	position: absolute;
+	right: 30px;
+	top: 18px;
+	font-size: 16px;
+	cursor: pointer;
+}
 .containerMain .contentMain h1{
 	font-family:'Hybrid';
 	height: 70px;
@@ -222,21 +233,3 @@ select {
 	color: #6560db;
 }
 
-/*个人信息*/
-.containerMain .contentMain .info{
-	height: 70px;
-	line-height: 70px;
-	padding-left: 20px;
-	
-}
-.contentMain .info span.num,.contentMain .info span.ip,.contentMain .info span.name {
-	color: #7d77df;
-	font-size: 16px;
-}
-/*服务器基本资料*/
-.containerMain .contentMain .server{
-	background-color: #FFFFFF;
-	background-image: url(../img/bgjxin.png);
-	background-repeat: no-repeat;
-	height: 123px;
-}
