@@ -138,15 +138,20 @@ item input{
     font-family: PingFangSC-Regular;
     font-weight: bold;
 	background-color: #FFFFFF;
-	text-align: center;
 	font-size: 0.18rem;
 	z-index: 10;
-
 	color: #333333;
 }
 .getResultModel>h2{
 	padding-bottom: 20px;
 	font-size: 0.32rem;
+	text-align: center;
+}
+.msg_box>p{
+	padding: 2px 0.3rem;
+	font-size: 0.22rem;
+	line-height: 0.5rem;
+	color: #222;
 }
 .close{
 	display: block;

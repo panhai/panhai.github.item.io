@@ -11,7 +11,6 @@
 		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<link rel="stylesheet" type="text/css" href="css/Test-and-extension.css" />
 		<link rel="stylesheet" type="text/css" href="mui/css/mui.min.css"/>
-		<!--<link rel="stylesheet" type="text/css" href="css/layer.css"/>-->
 		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 		<script src="ydui/js/ydui.flexible.js"></script>
 		<!-- <SCRIPT LANGUAGE="JavaScript" src=http://floathn.tq.cn/floatcard?adminid=9838315&sort=0 ></SCRIPT> -->
@@ -149,13 +148,15 @@
 		<div class="getResultModel None" >
 			<span class="close" style="font-weight: 300;"></span>
 			<h2>个人信息授权书</h2>
-			<div>
-				<p>尊敬的用户，您选择使用“自动输入历史手机号”功</p>
-				<p>能后，您同意本平台在法律允许的范围内，收集您的</p>
-				<p>手机号码，您已知晓并同意在您下次浏览广告页面</p>
-				<p>时，我们会帮您预先填写您上次输入的历史手机号，</p>
-				<p>您的手机号码仅会用于在广告页面的预填充，且只有</p>
-				<p>您点击提交按钮之后信息才会传递给广告主商家。</p>
+			<div  class="msg_box">
+				<p>
+					尊敬的用户，您选择使用“自动输入历史手机号”功
+					能后，您同意本平台在法律允许的范围内，收集您的
+					手机号码，您已知晓并同意在您下次浏览广告页面
+					时，我们会帮您预先填写您上次输入的历史手机号，
+					您的手机号码仅会用于在广告页面的预填充，且只有
+					您点击提交按钮之后信息才会传递给广告主商家。
+				</p>
 			</div>
 		</div>
 		<!-- 手机验证弹框 -->
@@ -289,7 +290,7 @@
 						dialog.alert(msgrArr[2])
 						return false;
 					}
-					console.log(myreg.test($.trim($($('.phone').val()))))
+					
 					if (!myreg.test($.trim($('.phone').val()))) {
 						dialog.alert('请输入正确的11位有效手机号码')
 						return false;
