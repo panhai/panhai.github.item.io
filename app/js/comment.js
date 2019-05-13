@@ -1,7 +1,7 @@
 // 解决手机端输入框被键盘盖住
-setTimeout(function(){
+setTimeout(function() {
 	document.body.scrollTop = document.body.scrollHeight;
-},300);
+}, 300);
 
 
 
@@ -104,8 +104,51 @@ function MyRegExp() {
 }
 
 // 客服窗口代码
-function kefu(){
-	var _53code=document.createElement("script");_53code.src = '//tb.53kf.com/code/code/c762816c46f81ba33560df7feac9ded1/1'; var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(_53code, s);
+function kefu() {
+	var _53code = document.createElement("script");
+	_53code.src = '//tb.53kf.com/code/code/c762816c46f81ba33560df7feac9ded1/1';
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(_53code, s);
 }
 
+// 倒计时
+/**
+ * src  图片地址结构
+ * timebox  倒数计时盒子
+ * time_img 图片class
+ * 例如：
+ * 'img/img_m/','img/img_m/07.png','time-box','day_time_img'
+ */
 
+function showDay(srcq,src, timebox, time_img) {
+	var date = new Date();
+	var year = date.getFullYear();
+	var lastDate = new Date(year, 4, 19, "00", "00");
+	var firstDay = new Date(year,4,12,"00","00");
+	var src = src;
+	var srcq = srcq;
+
+	var index1 = src.lastIndexOf("/") + 1;
+	var index2 = src.lastIndexOf(".");
+
+	var len = src.length;
+	var src2 = src.substring(index1, index2);
+
+	console.log(src2, index1, index2)
+	var d = lastDate - date; // 时间戳
+
+	if(firstDay>date){
+		$('.'+timebox).addClass('None')
+	}
+	
+	if (d < 0) {
+		$('.' + timebox).hide()
+	} else {
+		var dayNum = Math.floor(d / 1000 / 60 / 60 / 24) + 1;
+		var t = "0" + dayNum;
+		src2 = t;
+		var newsrc = srcq + src2 + ".png";
+		$('.' + time_img).attr('src', newsrc)
+	}
+
+}

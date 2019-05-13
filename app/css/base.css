@@ -159,3 +159,6 @@ button {
   border: 0;
   border: none;
 }
+.text-center {
+  text-align: center;
+}
