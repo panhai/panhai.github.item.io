@@ -14,6 +14,22 @@
 		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 		<script src="ydui/js/ydui.flexible.js"></script>
 		<!-- <SCRIPT LANGUAGE="JavaScript" src=http://floathn.tq.cn/floatcard?adminid=9838315&sort=0 ></SCRIPT> -->
+    <script>
+        window._agl = window._agl || [];
+        (function () {
+            _agl.push(
+                ['production', '_f7L2XwGXjyszb4d1e2oxPybgD']
+            );
+            (function () {
+                var agl = document.createElement('script');
+                agl.type ='text/javascript';
+                agl.async = true;
+                agl.src = 'https://fxgate.baidu.com/angelia/fcagl.js?production=_f7L2XwGXjyszb4d1e2oxPybgD';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(agl, s);
+            })();
+        })();
+        </script>
 	</head>
 	<body>
 		<div id="app">
@@ -364,7 +380,8 @@
 			              type: "POST",
 			              success: function(res) {
 			            	  $('.phoneModel').hide();
-			                  $('.motal').hide();
+			                 $('.motal').hide();
+                        window._agl && window._agl.push(['track', ['success', {t: 3}]])
 			                dialog.alert('提交成功，感谢您的回答！');
 			              },
 			              error: function() {
