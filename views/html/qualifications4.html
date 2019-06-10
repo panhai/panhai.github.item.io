@@ -115,10 +115,16 @@
 								<input name="way" type="radio" value="其他"  class="way" required>
 							</div>
 						</div>
+            <div class="inp-name">
+            	<p>您的姓名（必填项）：<span style="color:red;">*</span></p>
+            	<div class="name-line">
+            		<input type="text" required name="username" maxlength="8"  class="username"  value="" placeholder="请输入您的姓名"/>
+            	</div>
+            </div>
 						<div class="inp-name">
 							<p>您的手机号（必填项）：<span style="color:red;">*</span></p>
 							<div class="name-line">
-								<input type="text" required name="userphone" maxlength="11"  class="telphone"  value="" placeholder="请输入"/>
+								<input type="text" required name="userphone" maxlength="11"  class="telphone"  value="" placeholder="请输入您的手机"/>
 							</div>
 						</div>
 						<div class="out-box">
@@ -175,7 +181,7 @@
 					<div class="customer-service fied">
 						<div class="left">
 							<img src="img/tel.png" alt="">
-							<a href="https://www16.53kf.com/webCompany.php?kf_sign=TI4NDMTU1OgxNjExMDkwNDA0NTUzMDA4NzIxODc2NzM%253D&arg=10187673&style=1">电话拨打</a>
+							<a href="tel:020-82526164">电话拨打</a>
 						</div>
 						<div class="center">
 							<img src="img/zixun.png" alt="">
@@ -322,6 +328,10 @@
 						dialog.alert('请输入正确的11位手机号码！')
 						return false;
 					}
+					 if(!$('input[name=username]').val()){
+						dialog.alert('请勾选您的姓名！')
+						return false;
+					}
 					
           
           
@@ -356,7 +366,8 @@
 							ageGroups: $('input[name=age]:checked').val(),
 							likeMajor: $('input[name=way]:checked').val(),
 							customerPhone: $('input[name=userphone]').val(),
-							sourceLink:"fxgate.baidu.com"
+              customerName: $('input[name=username]').val(),
+							sourceLink:"baidu.com?from=qualifications4.html"
 						}
 						
 						$.ajax({

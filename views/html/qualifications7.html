@@ -545,7 +545,7 @@
             		  liftingMode: $('input[name=way]:checked').val(),
             		  customerName: $('input[name=username]').val(),
             		  customerPhone: $('input[name=userphone]').val(),
-            		  sourceLink:"fxgate.baidu.com"
+            		  sourceLink:"baidu.com?from=qualifications7.html"
               } 
               $.ajax({
                 url: "../../data/customerInfromation/insertCustomerInfromation",
@@ -553,7 +553,8 @@
                 type: "POST",
                 success: function(res) {
                 	 $('.phoneModel').hide();
-                     $('.motal').hide();
+                   $('.motal').hide();
+                    window._agl && window._agl.push(['track', ['success', {t: 3}]])
                   dialog.alert('提交成功，感谢您的回答！');
                 },
                 error: function() {

@@ -108,6 +108,14 @@
 							<input name="way" type="radio" value="非广东户籍" class="hone">
 						</div>
 					</div>
+          <div class="item">
+          	<div class="bt-line">
+          		<span>您的姓名：</span>
+          		<span class="red">*</span>
+          	</div>
+          	<input type="text" name="username"  maxlength="11" class="username" required placeholder="请输入您的姓名"/>
+          	<div class="line"></div>
+          </div>
 					<div class="item">
 						<div class="bt-line">
 							<span>您接收的手机信息是：</span>
@@ -331,7 +339,10 @@
 						dialog.alert('请输入正确的11位有效手机号码')
 						return false;
 					} 
-					
+					 if(!$('input[name=username]').val()){
+						dialog.alert('请勾选您的姓名！')
+						return false;
+					}
 					if($('.check').prop('checked') === false){
 						dialog.alert('请勾选个人信息授权书')
 						return false;
@@ -371,7 +382,8 @@
 			            	objective: $('input[name=age]').val(),
 			            	customerLocal: $('input[name=way]').val(),
 			              	customerPhone: $('input[name=userphone]').val(),
-			              	sourceLink:"fxgate.baidu.com"
+                      customerName: $('input[name=username]').val(),
+			              	sourceLink:"baidu.com?from=qualifications3.html"
 			            }
 			            
 			            $.ajax({

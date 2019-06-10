@@ -14,6 +14,22 @@
 <meta name="description" content="博霖教学是一个学历提升平台,为广大学员提供学历提升带来福利!" />
 <link rel="stylesheet" type="text/css" href="index/css/layer.css" />
 <link rel="stylesheet" href="index/css/index.css">
+<script>
+        window._agl = window._agl || [];
+        (function () {
+            _agl.push(
+                ['production', '_f7L2XwGXjyszb4d1e2oxPybgD']
+            );
+            (function () {
+                var agl = document.createElement('script');
+                agl.type ='text/javascript';
+                agl.async = true;
+                agl.src = 'https://fxgate.baidu.com/angelia/fcagl.js?production=_f7L2XwGXjyszb4d1e2oxPybgD';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(agl, s);
+            })();
+        })();
+        </script>
 </head>
 <body>
 	<div class="app" id="app">
@@ -164,9 +180,9 @@
 					</div>
 					<div class="item">
 						<input type="radio" name="n" value="18-24岁" v-model="ageGroups">
-						<span style="margin-right: 1.04rem;">18-24岁</span> <input
+						<span style="margin-right: 1.09rem;">18-24岁</span> <input
 							type="radio" name="n" value="25-29岁" v-model="ageGroups">
-						<span style="margin-right: 0.72rem;">25-29岁</span> <input
+						<span style="margin-right: 0.61rem;">25-29岁</span> <input
 							type="radio" name="n" value="30-35岁" v-model="ageGroups">
 						<span>30-35岁</span> <br> <input type="radio" name="n"
 							value="35岁以上" v-model="ageGroups"> <span>35岁以上</span>
@@ -197,9 +213,9 @@
 					</div>
 					<div class="item">
 						<input type="radio" name="t" value="找工作/晋升" v-model="objective">
-						<span style="margin-right: 0.3rem;">找工作/晋升</span> <input
+						<span style="margin-right: 0.22rem;">找工作/晋升</span> <input
 							type="radio" name="t" value="考公务员" v-model="objective"> <span
-							style="margin-right: 0.3rem;">考公务员</span> <input type="radio"
+							style="margin-right: 0.82rem;">考公务员</span> <input type="radio"
 							name="t" value="城市入户" v-model="objective"> <span>城市入户</span>
 						<br> <input type="radio" name="ts" value="出国留学"
 							v-model="objective"> <span style="margin-right: 0.6rem;">出国留学</span>
@@ -632,12 +648,13 @@
               liftingMode: this.liftingMode,
               objective: this.objective,
               receptTime: this.receptTime,
-              sourceLink : window.location.href
+              sourceLink :'bolinjy.cn/app/index.html?from=bolinapp'
             }
             console.log(data)
             this.$.post("../../data/customerInfromation/insertCustomerInfromation",
               
                data,function(res){
+                 window._agl && window._agl.push(['track', ['success', {t: 3}]])
             	   layer.open({
                        type: 0,
                        content: "数据提交成功！",
@@ -682,12 +699,13 @@
             var data = {
             customerName:this.username2,
             customerPhone:this.userphone2,
-            sourceLink : window.location.href
+            sourceLink :'bolinjy.cn/app/index.html?from=bolinapp'
             }
             // console.log(data)
          this.$.post("../../data/customerInfromation/insertCustomerInfromation", data,function(res){
         	 
               if (res.code=="success") {
+                 window._agl && window._agl.push(['track', ['success', {t: 3}]])
             	  layer.open({
                       type: 0,
                       content: "数据提交成功！",
