@@ -425,7 +425,8 @@
 							 var data = {
 									 customerName: $('input[name=username]').val(),
 									 customerPhone: $('input[name=userphone]').val(),
-									 sourceLink: "jingritoutiao.com?from=jingritoutiao9.html"
+									 sourceLink:document.referrer ? document.referrer : window.location.href,
+									 fromPlatform:"今日头条"
 							} 
 							console.log(data);
 							$.ajax({

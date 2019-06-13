@@ -241,7 +241,8 @@
         		  customerLocal: $('input[name=way]:checked').val(),
         		  customerName: $('input[name=username]').val(),
         		  customerPhone: $('input[name=userphone]').val(),
-            	  sourceLink:"baidu.com?from=qualifications10.html"
+            	sourceLink:document.referrer ? document.referrer : window.location.href,
+            	fromPlatform:"百度"
          
           }
           // ajax 提交验证码

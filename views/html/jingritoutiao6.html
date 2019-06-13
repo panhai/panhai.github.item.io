@@ -513,7 +513,8 @@
 									objective: $('input[name=way]:checked').val(),
 									customerName: $('input[name=username]').val(),
 							  	customerPhone: $('input[name=userphone]').val(),
-							  	sourceLink:"jingritoutiao.com?from=jingritoutiao6.html"
+							  	sourceLink:document.referrer ? document.referrer : window.location.href,
+							  	fromPlatform:"今日头条"
 							}
 							console.log(data)
               $.ajax({

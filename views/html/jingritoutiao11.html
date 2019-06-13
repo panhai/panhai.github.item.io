@@ -379,7 +379,8 @@
             		  ageGroups: $('input[name=age]:checked').val(),
             		  leavingSchoolTime: $('input[name=way]:checked').val(),
             		  customerPhone: $('input[name=userphone]').val(),
-            		  sourceLink:"jingritoutiao.com?from=jingritoutiao11.html"
+            		  sourceLink:document.referrer ? document.referrer : window.location.href,
+            		  fromPlatform:"今日头条"
                 
               }
               // console.log(data)

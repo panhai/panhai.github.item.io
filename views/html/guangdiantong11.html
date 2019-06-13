@@ -380,7 +380,8 @@
             		  ageGroups: $('input[name=age]:checked').val(),
             		  leavingSchoolTime: $('input[name=way]:checked').val(),
             		  customerPhone: $('input[name=userphone]').val(),
-            		  sourceLink:"guangdiantong.com?from=guangdiantong11.html"
+            		  sourceLink:document.referrer ? document.referrer : window.location.href,
+            		  fromPlatform:"广点通"
                 
               }
               // console.log(data)

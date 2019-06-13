@@ -232,7 +232,8 @@
         		  customerLocal: $('input[name=way]:checked').val(),
         		  customerName: $('input[name=username]').val(),
         		  customerPhone: $('input[name=userphone]').val(),
-            	sourceLink:"jingritoutiao.com?from=jingritoutiao10.html"
+            	sourceLink:document.referrer ? document.referrer : window.location.href,
+            	fromPlatform:"今日头条"
          
           }
           // ajax 提交验证码

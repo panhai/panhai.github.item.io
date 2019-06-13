@@ -233,7 +233,8 @@
         		  customerLocal: $('input[name=way]:checked').val(),
         		  customerName: $('input[name=username]').val(),
         		  customerPhone: $('input[name=userphone]').val(),
-            	sourceLink:"guangdiantong.com?from=guangdiantong10.html"
+            	sourceLink:document.referrer ? document.referrer : window.location.href,
+            	fromPlatform:"广点通"
          
           }
           // ajax 提交验证码

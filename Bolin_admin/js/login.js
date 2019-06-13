@@ -10,7 +10,6 @@ function regData() {
     var password = $.trim($('input[name=password]').val());
 
 
-
     if (!username) {
         layer.msg("请输入用户名！")
         return false;
@@ -27,17 +26,18 @@ function regData() {
 
     // 提交数据进行验证
     $.ajax({
-        url: "",
+        url: "json.json",
         data: data,
         async: true,
-        method: 'post',
+        method: 'get',
         cache: false,
         dataType: "json",
-        success: function() {
-
+        success: function(res) {
+            console.log(res)
+            layer.msg("登陆成功！")
         },
         error: function(res) {
-
+            layer.msg("登陆失败！")
         }
     })
 

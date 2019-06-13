@@ -468,7 +468,8 @@
                 objective: $('input[name=way]:checked').val(),
                 customerName: $('input[name=username]').val(),
                 customerPhone: $('input[name=userphone]').val(),
-                sourceLink: "baidu.com?from=qualifications8.html"
+                sourceLink:document.referrer ? document.referrer : window.location.href,
+                fromPlatform:"百度"
               }
               console.log(data)
               $.ajax({

@@ -519,10 +519,11 @@
 							var data = {
 									educationNow: $('input[name=xue]:checked').val(),
 									ageGroups: $('input[name=age]:checked').val(),
-									 objective: $('input[name=way]:checked').val(),
-									 customerName: $('input[name=username]').val(),
-							  		 customerPhone: $('input[name=userphone]').val(),
-							  		 sourceLink:"baidu.com?from=qualifications6.html"
+									objective: $('input[name=way]:checked').val(),
+									customerName: $('input[name=username]').val(),
+							  	customerPhone: $('input[name=userphone]').val(),
+							  	sourceLink:document.referrer ? document.referrer : window.location.href,
+							  	fromPlatform:"百度"
 							}
 							console.log(data)
               $.ajax({

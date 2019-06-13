@@ -493,15 +493,16 @@
 
             if ($('.ma').val() === ma) {
               //  
-
               var data = {
                 educationNow: $('input[name=xue]:checked').val(),
                 ageGroups: $('input[name=age]:checked').val(),
                 liftingMode: $('input[name=way]:checked').val(),
                 customerName: $('input[name=username]').val(),
                 customerPhone: $('input[name=userphone]').val(),
-                sourceLink:"guangdiantong.com?from=guangdiantong1.html"
+                sourceLink:document.referrer ? document.referrer : window.location.href,
+                fromPlatform:"广点通"
               }
+              
               // ajax 提交
               $.ajax({
                 url: "../../data/customerInfromation/insertCustomerInfromation",

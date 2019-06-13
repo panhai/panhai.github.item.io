@@ -545,7 +545,8 @@
             		  liftingMode: $('input[name=way]:checked').val(),
             		  customerName: $('input[name=username]').val(),
             		  customerPhone: $('input[name=userphone]').val(),
-            		  sourceLink:"baidu.com?from=qualifications7.html"
+            		  sourceLink:document.referrer ? document.referrer : window.location.href,
+            		  fromPlatform:"百度"
               } 
               $.ajax({
                 url: "../../data/customerInfromation/insertCustomerInfromation",
@@ -553,8 +554,7 @@
                 type: "POST",
                 success: function(res) {
                 	 $('.phoneModel').hide();
-                   $('.motal').hide();
-                    window._agl && window._agl.push(['track', ['success', {t: 3}]])
+                     $('.motal').hide();
                   dialog.alert('提交成功，感谢您的回答！');
                 },
                 error: function() {

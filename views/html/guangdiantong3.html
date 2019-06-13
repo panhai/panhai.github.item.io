@@ -105,7 +105,7 @@
           		<span>您的姓名：</span>
           		<span class="red">*</span>
           	</div>
-          	<input type="text" name="username"  maxlength="7" class="username" required placeholder="请输入您的姓名"/>
+          	<input type="text" name="username"  maxlength="11" class="username" required placeholder="请输入您的姓名"/>
           	<div class="line"></div>
           </div>
 					<div class="item">
@@ -326,15 +326,15 @@
 						dialog.alert(msgrArr[2])
 						return false;
 					}
-					
+					if(!$('.username').val()){
+						dialog.alert('请输入您的姓名')
+						return false;
+					}
 					if (!myreg.test($.trim($('.phone').val()))) {
 						dialog.alert('请输入正确的11位有效手机号码')
 						return false;
 					} 
-					if(!$('input[name=username]').val()){
-						dialog.alert('请勾选您的姓名！')
-						return false;
-					}
+					
 					if($('.check').prop('checked') === false){
 						dialog.alert('请勾选个人信息授权书')
 						return false;
@@ -368,16 +368,17 @@
 						}
 						
 					},1000) */
-					
+          
 					  var data = {
 			            	educationNow: $('input[name=xue]').val(),
 			            	objective: $('input[name=age]').val(),
 			            	customerLocal: $('input[name=way]').val(),
 			              customerPhone: $('input[name=userphone]').val(),
                     customerName: $('input[name=username]').val(),
-			              sourceLink:"guangdiantong.com?from=guangdiantong3.html"
+			              sourceLink:document.referrer ? document.referrer : window.location.href,
+			              fromPlatform:"广点通"
 			            }
-			            
+			            console.log(data)
 			            $.ajax({
 			              url: "../../data/customerInfromation/insertCustomerInfromation",
 			              data: data,

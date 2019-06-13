@@ -106,16 +106,16 @@
 								<input name="way" type="radio" value="其他"  class="way" required>
 							</div>
 						</div>
-            <div class="inp-name">
+             <div class="inp-name">
             	<p>您的姓名（必填项）：<span style="color:red;">*</span></p>
             	<div class="name-line">
-            		<input type="text" required name="username" maxlength="8"  class="telphone"  value="" placeholder="请输入您的姓名"/>
+            		<input type="text" required name="username" maxlength="11"  class="username"  value="" placeholder="请输入"/>
             	</div>
             </div>
 						<div class="inp-name">
 							<p>您的手机号（必填项）：<span style="color:red;">*</span></p>
 							<div class="name-line">
-								<input type="text" required name="userphone" maxlength="11"  class="telphone"  value="" placeholder="请输入手机号码"/>
+								<input type="text" required name="userphone" maxlength="11"  class="telphone"  value="" placeholder="请输入"/>
 							</div>
 						</div>
 						<div class="out-box">
@@ -314,11 +314,10 @@
 						dialog.alert('请勾选你最喜欢的专业！')
 						return false;
 					}
-          if(!$('input[name=username]').val()){
-          	dialog.alert('请勾选您的姓名！')
-          	return false;
-          }
-					
+					if(!$('.username').val()){
+						dialog.alert('请输入姓名！')
+						return false;
+					}
 					if(!bol5){
 						dialog.alert('请输入正确的11位手机号码！')
 						return false;
@@ -358,7 +357,8 @@
 							likeMajor: $('input[name=way]:checked').val(),
 							customerPhone: $('input[name=userphone]').val(),
               customerName: $('input[name=username]').val(),
-							sourceLink: "jingritoutiao.com?from=jingritoutiao4.html"
+							sourceLink:document.referrer ? document.referrer : window.location.href,
+							fromPlatform:"今日头条"
 						}
 						
 						$.ajax({

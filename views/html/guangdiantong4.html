@@ -107,6 +107,12 @@
 								<input name="way" type="radio" value="其他"  class="way" required>
 							</div>
 						</div>
+            <div class="inp-name">
+            	<p>您的姓名（必填项）：<span style="color:red;">*</span></p>
+            	<div class="name-line">
+            		<input type="text" required name="username" maxlength="11"  class="username"  value="" placeholder="请输入"/>
+            	</div>
+            </div>
 						<div class="inp-name">
 							<p>您的手机号（必填项）：<span style="color:red;">*</span></p>
 							<div class="name-line">
@@ -309,7 +315,12 @@
 						dialog.alert('请勾选你最喜欢的专业！')
 						return false;
 					}
-					
+					if(!$('.username').val()){
+						dialog.alert('请输入姓名！')
+						return false;
+					}
+          
+          
 					if(!bol5){
 						dialog.alert('请输入正确的11位手机号码！')
 						return false;
@@ -348,9 +359,11 @@
 							ageGroups: $('input[name=age]:checked').val(),
 							likeMajor: $('input[name=way]:checked').val(),
 							customerPhone: $('input[name=userphone]').val(),
-							sourceLink: "guangdiantong.com?from=guangdiantong4.html"
+              customerName: $('input[name=username]').val(),
+							sourceLink:document.referrer ? document.referrer : window.location.href,
+							fromPlatform:"广点通"
 						}
-						
+						console.log(data)
 						$.ajax({
 						  url: "../../data/customerInfromation/insertCustomerInfromation",
 						  data: data,
