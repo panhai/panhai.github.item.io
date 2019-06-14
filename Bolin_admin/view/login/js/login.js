@@ -8,8 +8,7 @@ function regData() {
     // username password
     var username = $.trim($('input[name=username]').val());
     var password = $.trim($('input[name=password]').val());
-
-
+    
     if (!username) {
         layer.msg("请输入用户名！")
         return false;
@@ -18,7 +17,7 @@ function regData() {
         layer.msg("请输入密码！")
         return false;
     }
-
+    
     var data = {
         "username": username,
         "password": password
@@ -33,7 +32,10 @@ function regData() {
         cache: false,
         dataType: "json",
         success: function(res) {
-            console.log(res)
+            console.log(res.code)
+            if(res.code=="ok"){
+                window.location.href = "../index/index.html";
+            }
             layer.msg("登陆成功！")
         },
         error: function(res) {

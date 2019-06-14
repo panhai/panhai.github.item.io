@@ -3,18 +3,18 @@
 
   <head>
     <meta charset="utf-8">
-    <title>后台数据管理系统-客户列表</title>
+    <title>客户管理-客户列表</title>
     <meta name="description" content="博霖教育后台数据管理" />
     <meta name="keywords" content="博霖教育|学历报考中心|学历提升|广东省成人学历报名中心" />
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" type="images/x-icon" href="../../img/bolinglink.png">
-    
+    <link rel="stylesheet" href="../../frame/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../../frame/layui/css/layui.css" />
     <link rel="stylesheet" href="../../plugin/css/easyui.css">
-    <link rel="stylesheet" type="text/css" href="../../css/index/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/customer-list.css" />
     <link rel="stylesheet" type="text/css" href="../../plugin/css/kuCity.css" />
-    
+
   </head>
 
   <body>
@@ -24,7 +24,257 @@
           <img src="../../img/logo.png" alt="">
         </div>
         <div class="left-box">
-          <!-- 左侧导航 --> 
+          <!-- 左侧导航 -->
+          <ul class="nav-box">
+            <li>
+              <div class="list-title">
+                <i class="fa fa-cog q" style="font-size:18px"></i>
+                <span>系统管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-comment" style="font-size:18px"></i>
+                  <a href="#">公司信息</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-comment-o" style="font-size:18px"></i>
+                  <a href="#">部门信息</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-deafness" style="font-size:18px"></i>
+                  <a href="#">职位授权</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-key" style="font-size:18px"></i>
+                  <a href="#">自定义授权</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                 <i class="fa fa-s15 q" style="font-size:18px"></i>
+                <span>导入管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                   <i class="fa fa-map" style="font-size:18px"></i>
+                  <a href="#">批量导入</a>
+                </div>
+                <div class="list">
+                   <i class="fa fa-map-o" style="font-size:18px"></i>
+                  <a href="#">单个录入</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-wifi q" style="font-size:18px"></i>
+                <span>分配管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-tags" style="font-size:18px"></i>
+                  <a href="#">分配权重设置</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-tag" style="font-size:18px"></i>
+                  <a href="#">指定人员设置</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-sticky-note q" style="font-size:18px"></i>
+                <span>推广管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-podcast" style="font-size:18px"></i>
+                  <a href="#">来源平台</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-power-off" style="font-size:18px"></i>
+                  <a href="#">推广分配</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-pencil-square-o" style="font-size:18px"></i>
+                  <a href="#">合同管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-pencil-square" style="font-size:18px"></i>
+                  <a href="#">数据管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-plug" style="font-size:18px"></i>
+                  <a href="#">链接管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-mortar-board" style="font-size:18px"></i>
+                  <a href="#">账号管理</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-phone-square q" style="font-size:18px"></i>
+                <span>客服管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-address-book" style="font-size:18px"></i>
+                  <a href="#">客户管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-address-card" style="font-size:18px"></i>
+                  <a href="#">校区映射</a>
+                </div>
+              </div>
+            </li>
+            <li class="">
+              <div class="list-title cur">                          
+                <i class="fa fa-user q" style="font-size:18px"></i>     
+                <span>客户管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <!--  active选项激活类 list-active子选项激活类  -->
+              <div class="box ">
+                <div class="list ">
+                  <i class="fa fa-user-circle" style="font-size:18px"></i>
+                  <a href="#">客户列表</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-address-card" style="font-size:18px"></i>
+                  <a href="#">私海客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-male" style="font-size:18px"></i>
+                  <a href="#">公海客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-street-view" style="font-size:18px"></i>
+                  <a href="#">预约客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-user-circle-o" style="font-size:18px"></i>
+                  <a href="#">上门客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-user-o" style="font-size:18px"></i>
+                  <a href="#">定金客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-user-secret" style="font-size:18px"></i>
+                  <a href="#">成交客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-wheelchair-alt" style="font-size:18px"></i>
+                  <a href="#">无效客户</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-vcard-o" style="font-size:18px"></i>
+                  <a href="#">客户轨迹</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-tv q" style="font-size:18px"></i> 
+                <span>报表管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-sticky-note-o" style="font-size:18px"></i>
+                  <a href="#">营销报表</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-sticky-note" style="font-size:18px"></i>
+                  <a href="#">客服报表</a>
+                </div>
+                <div class="list">
+                 <i class="fa fa-pencil-square-o" style="font-size:18px"></i>
+                  <a href="#">校区销售报表</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-pencil-square" style="font-size:18px"></i>
+                  <a href="#">个人销售报表</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-folder-open" style="font-size:18px"></i>
+                  <a href="#">外呼报表</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-sign-language q" style="font-size:18px"></i> 
+                <span>排班管理</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-tachometer" style="font-size:18px"></i>
+                  <a href="#">班次管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-suitcase" style="font-size:18px"></i>
+                  <a href="#">人员排班</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                 <i class="fa fa-universal-access q" style="font-size:18px"></i> 
+                <span>人员映射</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-window-restore" style="font-size:18px"></i>
+                  <a href="#">TQ管理</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-building" style="font-size:18px"></i>
+                  <a href="#">手机管理</a>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="list-title">
+                <i class="fa fa-pencil-square q" style="font-size:18px"></i> 
+                <span>统计分析</span>
+                <i class="layui-icon layui-icon-right h"></i>
+              </div>
+              <div class="box">
+                <div class="list">
+                  <i class="fa fa-gift" style="font-size:18px"></i>
+                  <a href="#">客户数据漏斗分析</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-picture-o" style="font-size:18px"></i>
+                  <a href="#">推广数据漏斗分析</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-industry" style="font-size:18px"></i>
+                  <a href="#">客服数据漏斗分析</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-pie-chart" style="font-size:18px"></i>
+                  <a href="#">链接来源分析</a>
+                </div>
+                <div class="list">
+                  <i class="fa fa-paw" style="font-size:18px"></i>
+                  <a href="#">关键词来源分析</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
         </div>
       </div>
       <div class="mian-content">
@@ -43,7 +293,7 @@
                 小飞侠<i class="layui-icon layui-icon-triangle-d" style="font-size: 16px;margin-left: 10px;"></i>
                 <div class="ul-set">
                   <ul>
-                  	<li><span>个人设置</span></li>
+                    <li><span>个人设置</span></li>
                     <li><a href="../login/login .html" style="color: #fff;">退出</a></li>
                   </ul>
                 </div>
@@ -96,9 +346,9 @@
               </div>
               <div class="layui-form-item layui-inline">
                 <span style="margin-left: 15px;">时间段：</span>
-                <input type="text" placeholder="请选择开始时间" autocomplete="off"  name="startTime" id="stratTime" style="margin-right: 0px;" />
+                <input type="text" placeholder="请选择开始时间" autocomplete="off" name="startTime" id="stratTime" style="margin-right: 0px;" />
                 <span>——</span>
-                <input type="text" name="endTime" placeholder="请选择结束时间" autocomplete="off"  id="endTime">
+                <input type="text" name="endTime" placeholder="请选择结束时间" autocomplete="off" id="endTime">
               </div>
               <div class="layui-form-item layui-inline">
                 <button type="button" class="layui-btn search searchBtn">查询</button>
@@ -113,7 +363,7 @@
               toolbar="#tb">
               <thead>
                 <tr>
-                  <th data-options=" field: 'ck',checkbox:true" ></th>
+                  <th data-options=" field: 'ck',checkbox:true"></th>
                   <th data-options="field: 'customerId' " width="18%" sortable="true">用户Id</th>
                   <th data-options="field: 'customerName' " width="19%">用户姓名</th>
                   <th data-options="field: 'sex' " width="10%">性别</th>
@@ -440,11 +690,9 @@
     <script src="../../plugin/kuCity.js "></script>
     <script src="../../plugin/json_to_Excel.js"></script>
     <script>
-      // 加载左侧导航
-      $(".left-box").load("../public-html/left-nav.html"); 
-      
+     
       // 选择平台
-      
+
       $('#fromPlatform').combobox({
         url: '../../js/pingtai.json',
         valueField: 'id',
@@ -521,13 +769,13 @@
               $.messager.alert('提示', '结束时间不可小于开始时间');
               return false;
             }
-            
+
             return true;
           },
           success: function(res) {
             //数据提交成功更新数据表格
             console.log(res);
-            
+
             $("#tt ").datagrid("reload"); //更新表格
           }
         })
@@ -546,13 +794,13 @@
       });
       // 操作数据表格
       $('#tt').datagrid({
-        onCheck:function(){
+        onCheck: function() {
           alert('勾选一行了')
         },
         onClickCell: function(rowIndex, field, value) { //点击单元格
           console.log(rowIndex, field, value);
           //获取一行数据
-         var row = $('#tt').datagrid('getRows')[rowIndex];
+          var row = $('#tt').datagrid('getRows')[rowIndex];
           console.log(row)
           if (field == 'customerName') { //判断是否是姓名的单元格
             // 把一行数据放到详情弹框中
@@ -716,7 +964,7 @@
             // var filevalue = $('#uploadExcel').val();
             var fileDir = $("#uploadExcel").val();
             // 获取类型
-            
+
             console.log(fileDir)
             var suffix = fileDir.substr(fileDir.lastIndexOf(".")).toLowerCase();
             if ("" == fileDir) {
@@ -743,33 +991,33 @@
       function leadingOut() {
         //获取表格所有数据
         var rows = $("#tt").datagrid("getRows"); //获取当前页的所有行数据
-        var getCheckedDataRow = $("#tt").datagrid("getChecked");//获取checkbox勾选中的的所有行数据
+        var getCheckedDataRow = $("#tt").datagrid("getChecked"); //获取checkbox勾选中的的所有行数据
         console.log(getCheckedDataRow.length);
         var getCheckedDataRowIDs = [];
         var option = {};
         if (getCheckedDataRow.length != 0) {
           //收集所有的数据id
-          for(var i=0;i<getCheckedDataRow.length;i++){
+          for (var i = 0; i < getCheckedDataRow.length; i++) {
             getCheckedDataRowIDs.push(1)
           }
           console.log(getCheckedDataRowIDs);
           option.fileName = 'excel';
-          option.datas = option.datas=[
-              {
-                sheetData:rows,
-                sheetName:'sheet',
-                columnWidths:['100'],
-                sheetHeader:['用户Id','用户姓名','性别','用户手机','用户年龄段','用户真实年龄','用户所在地',
-                '现有学历','提升目标','提升目的','爱好','来源平台','来源链接','更新日期','离开学校时间','用户备注','用户状态',]
-              },
-              {
-                sheetData:rows
-              }
-           ];
+          option.datas = option.datas = [{
+              sheetData: rows,
+              sheetName: 'sheet',
+              columnWidths: ['100'],
+              sheetHeader: ['用户Id', '用户姓名', '性别', '用户手机', '用户年龄段', '用户真实年龄', '用户所在地',
+                '现有学历', '提升目标', '提升目的', '爱好', '来源平台', '来源链接', '更新日期', '离开学校时间', '用户备注', '用户状态',
+              ]
+            },
+            {
+              sheetData: rows
+            }
+          ];
           var toExcel = new ExportJsonExcel(option);
           toExcel.saveExcel();
         } else {
-          $.messager.alert('提示','请勾选您需要导出的数据！')
+          $.messager.alert('提示', '请勾选您需要导出的数据！')
         }
       }
     </script>

@@ -129,13 +129,14 @@ h4 {
 }
 #main .consumer-box .yue .y-box .y-item {
   padding: 20px 0;
+  width: 12.5%;
 }
 #main .consumer-box .yue .y-box .y-item span.y-span {
   display: inline-block;
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  line-height: 170px;
+  width: 110px;
+  height: 110px;
+  border-radius: 110px;
+  line-height: 120px;
   background: #009688;
 }
 #main .consumer-box .yue .y-box .y-item span.y-span i {
@@ -150,7 +151,7 @@ h4 {
   font-size: 18px;
   border-bottom: 1px solid #999;
   padding-bottom: 15px;
-  width: 200px;
+  width: 88%;
   margin: 0 auto;
 }
 #main .consumer-box .yue .y-box .y-item:nth-child(2) span {
