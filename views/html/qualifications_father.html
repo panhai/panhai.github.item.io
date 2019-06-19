@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="mui/css/mui.min.css" />
     <link rel="stylesheet" type="text/css" href="css/father.css" />
     <script src="js/changHtmlFontSize.js"></script>
-
+    
    <script>
        window._agl = window._agl || [];
        (function () {
@@ -295,7 +295,7 @@
       //点击免费获取奖学金验证通过发送请求显示验证码弹框  phoneModel
       $('.get_stipend').on('click', function() {
         // 判断单选框是否勾选
-
+        
         var bol1 = isRadioChecked($('.xue'));
         var bol2 = isRadioChecked($('.age'));
         var bol3 = isRadioChecked($('.way'));
@@ -309,7 +309,7 @@
         var number = 60;
         var ma = "123"; //验证码  
         
-
+        var sourceLink = document.referrer ? document.referrer : window.location.href;
         
         if (!bol1) {
           dialog.alert('请勾选你最高学历！')
@@ -334,13 +334,14 @@
         
         if (bol1 && bol2 && bol3 && bol5) {
           console.log('可以发送验证码请求了 ！')
+          
           var data = {
             educationNow: $('input[name=xue]:checked').val(),
             ageGroups: $('input[name=age]:checked').val(),
             liftingMode: $('input[name=way]:checked').val(),
             customerName: $('input[name=username]').val(),
             customerPhone: $('input[name=userphone]').val(),
-            sourceLink:document.referrer ? document.referrer : window.location.href,
+            sourceLink:sourceLink,
             fromPlatform:"百度"
           }
           console.log(data)

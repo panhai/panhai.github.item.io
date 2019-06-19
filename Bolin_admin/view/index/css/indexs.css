@@ -63,7 +63,7 @@ h4 {
 }
 #main .consumer-box .result .result-box > h2 {
   margin-bottom: 2px;
-  font-size: 18px;
+  font-size: 26px;
   color: #009688;
   padding-left: 20px;
   padding-top: 15px;
@@ -90,9 +90,9 @@ h4 {
   color: #fff;
 }
 #main .consumer-box .result .result-box .r-item > .list .h-j h2 {
-  padding-top: 32px;
+  padding-top: 40px;
   color: #009688;
-  font-size: 30px;
+  font-size: 24px;
 }
 #main .consumer-box .result .result-box .r-item > .list .h-j p {
   border-bottom: 1px solid #999;
@@ -116,6 +116,12 @@ h4 {
 #main .consumer-box .result .result-box .r-item .list:nth-child(7) span {
   background: #ff00ff;
 }
+#main .consumer-box .result .result-box .r-item .list:nth-child(8) span {
+  background: #0000FF;
+}
+#main .consumer-box .result .result-box .r-item .list:nth-child(9) span {
+  background: #9900FF;
+}
 #main .consumer-box .yue h2.y-t {
   font-size: 30px;
   background: #fff;
@@ -129,7 +135,7 @@ h4 {
 }
 #main .consumer-box .yue .y-box .y-item {
   padding: 20px 0;
-  width: 12.5%;
+  width: 10%;
 }
 #main .consumer-box .yue .y-box .y-item span.y-span {
   display: inline-block;
@@ -143,7 +149,7 @@ h4 {
   color: #fff;
 }
 #main .consumer-box .yue .y-box .y-item h2 {
-  font-size: 30px;
+  font-size: 24px;
   color: #009688;
   padding: 8px 0;
 }

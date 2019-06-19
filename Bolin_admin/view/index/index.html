@@ -142,11 +142,11 @@
              </div>
              <!--  active选项激活类 list-active子选项激活类  -->
              <div class="box ">
-               <div class="list ">
+               <div class="list padding">
                  <i class="fa fa-user-circle" style="font-size:18px"></i>
                  <a href="../customer/customer-list.html" style="margin-left: 5px;">客户列表</a>
                </div>
-               <div class="list">
+               <div class="list padding">
                  <i class="fa fa-address-card" style="font-size:18px"></i>
                  <a href="../customer/private.html" style="margin-left: 4px;">私海客户</a>
                </div>
@@ -154,7 +154,7 @@
                  <i class="fa fa-male" style="font-size:18px"></i>
                  <a href="../customer/commonality.html" style="margin-left: 12px;">公海客户</a>
                </div>
-               <div class="list">
+               <div class="list padding">
                  <i class="fa fa-street-view" style="font-size:18px"></i>
                  <a href="../customer/subscribe.html" style="margin-left: 9px;">预约客户</a>
                </div>
@@ -162,7 +162,7 @@
                  <i class="fa fa-user-circle-o" style="font-size:18px"></i>
                  <a href="../customer/visit.html" style="margin-left: 5px;">上门客户</a>
                </div>
-               <div class="list">
+               <div class="list padding">
                  <i class="fa fa-user-o" style="font-size:18px"></i>
                  <a href="../customer/earnest.html" style="margin-left: 9px;">定金客户</a>
                </div>
@@ -171,6 +171,10 @@
                  <a href="../customer/make.html" style="margin-left: 9px;">成交客户</a>
                </div>
                <div class="list">
+                 <i class="fa fa-database" style="font-size:18px"></i>
+                 <a href="../customer/return-money.html" style="margin-left: 9px;">退费客户</a>
+               </div>
+               <div class="list padding">
                  <i class="fa fa-wheelchair-alt" style="font-size:18px"></i>
                  <a href="../customer/invalid.html" style="margin-left: 8px;">无效客户</a>
                </div>
@@ -276,6 +280,8 @@
          
         </div>
       </div>
+      
+      <!-- 右侧内容 -->
       <div class="mian-content">
         <div class="right-box" id="main">
           <!-- 右侧内容头部面包屑导航 -->
@@ -334,6 +340,7 @@
                 </div>
               </div>
             </div>
+            <!-- 今日统计 -->
             <div class="result layui-col-md8">
               <div class="result-box">
                 <h2>今日数据</h2>
@@ -399,6 +406,24 @@
                     <div class="layui-col-md6 h-j">
                       <h2>0</h2>
                       <p>今日客户量</p>
+                    </div>
+                  </div>
+                  <div class="layui-col-md4 layui-row list">
+                    <div class="layui-col-md6">
+                      <span><i class="fa fa-map-signs" style="font-size:36px"></i></span>
+                    </div>
+                    <div class="layui-col-md6 h-j">
+                      <h2>10</h2>
+                      <p>成交量</p>
+                    </div>
+                  </div>
+                  <div class="layui-col-md4 layui-row list">
+                    <div class="layui-col-md6">
+                      <span><i class="fa fa-database" style="font-size:36px"></i></span>
+                    </div>
+                    <div class="layui-col-md6 h-j">
+                      <h2>180000</h2>
+                      <p>汇款金额</p>
                     </div>
                   </div>
                 </div>
@@ -472,6 +497,24 @@
                     <p>本月客户量</p>
                   </div>
                 </div>
+                <div class="layui-col-md2 y-item">
+                  <div>
+                    <span class="y-span"><i class="fa fa-map-signs" style="font-size:46px"></i></span>
+                  </div>
+                  <div>
+                    <h2>150</h2>
+                    <p>成交量</p>
+                  </div>
+                </div>
+                <div class="layui-col-md2 y-item">
+                  <div>
+                    <span class="y-span"><i class="fa fa-database" style="font-size:46px"></i></span>
+                  </div>
+                  <div>
+                    <h2>2000000</h2>
+                    <p>汇款金额</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -491,7 +534,7 @@
     <script src="../../plugin/kuCity.js "></script>
     <script src="../../plugin/json_to_Excel.js"></script>
     <script>
-
+      
     </script>
   </body>
 

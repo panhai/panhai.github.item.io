@@ -230,7 +230,7 @@ function move2(box) {
 
 }
 
-function sourceLink(){
+function sourceLink() {
   var sourceLink = "";
   if (document.referrer) {
     sourceLink = document.referrer
@@ -240,4 +240,9 @@ function sourceLink(){
   return sourceLink;
 }
 
-
+// 判断是否是某个平台
+function ispingtai(str) {
+  var sourceLink = document.referrer.split('/')[2];
+  console.log(sourceLink)
+  return sourceLink.indexOf(str) != -1
+}

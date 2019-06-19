@@ -57,10 +57,6 @@ body {
   right: 7px;
   top: 0;
 }
-.nav-left .left-box .list-title span:nth-child(1) {
-  display: inline-block;
-  margin-left: 50px;
-}
 .nav-left .left-box .list-title.cur {
   background: #000;
 }
@@ -74,11 +70,11 @@ body {
   background: #009688;
 }
 .nav-left .left-box .box .list {
-  padding: 0 10px;
   height: 40px;
   line-height: 40px;
   color: #fff;
   background: #000;
+  padding-left: 2px;
 }
 .nav-left .left-box .box .list:hover {
   background: #009688;
@@ -115,6 +111,12 @@ body {
 .userSet > div:hover {
   background: #009688;
   color: #fff;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
 .hide {
   display: none;

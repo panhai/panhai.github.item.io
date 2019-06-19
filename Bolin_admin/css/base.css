@@ -70,11 +70,11 @@ body {
   background: #009688;
 }
 .nav-left .left-box .box .list {
-  padding: 0 10px;
   height: 40px;
   line-height: 40px;
   color: #fff;
   background: #000;
+  padding-left: 2px;
 }
 .nav-left .left-box .box .list:hover {
   background: #009688;
@@ -111,4 +111,10 @@ body {
 .userSet > div:hover {
   background: #009688;
   color: #fff;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
