@@ -380,18 +380,51 @@ textarea {
   line-height: 52px;
 }
 .app .section2 .box {
-  margin-top: 40px;
-  font-size: 0;
-  text-align: center;
+  padding-top: 40px;
 }
-.app .section2 .box > div {
-  display: inline-block;
-  font-size: 14px;
+.app .section2 .box .layui-col-md3 {
+  width: 25%;
+  float: left;
+}
+.app .section2 .box .layui-col-md3 > div {
   width: 285px;
   height: 320px;
-  box-shadow: 3px 3px 15px #ccc;
-  margin-right: 20px;
+  box-shadow: 4px 4px 15px #ccc;
+  padding-top: 30px;
 }
-.app .section2 .box > div.l {
-  margin: 0;
+.app .section2 .box .layui-col-md3 > div p.b {
+  font-size: 20px;
+  color: #d54107;
+  line-height: 32px;
+  padding: 20px 0 22px 0;
+}
+.app .section2 .box .layui-col-md3 > div p.c {
+  width: 246px;
+  height: 56px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: left;
+}
+.app .section2 .box .layui-col-md3 > div .btn {
+  padding-top: 30px;
+}
+.app .section2 .box .layui-col-md3 > div .btn a {
+  display: inline-block;
+  width: 225px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: solid 1px #fba746;
+  line-height: 44px;
+  font-size: 18px;
+  color: #fba746;
+}
+.app .section2 .box .layui-col-md3 > div .btn a:hover {
+  background: #fba746;
+  color: #fff;
+}
+.app .section3 {
+  background: #f3f3f3;
+  height: 757px;
 }

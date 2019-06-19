@@ -7,9 +7,10 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
+    <!-- <link rel="stylesheet" type="text/css" href="../mui/css/mui.min.css" /> -->
     <link rel="stylesheet" type="text/css" href="../ydui/css/ydui.css" />
-    <link rel="stylesheet" type="text/css" href="../mui/css/mui.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/ruhu3.css" />
+    <link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/ruhu5.css" />
     <script src="../js/changHtmlFontSize.js"></script>
 
     <!-- 广点通 -->
@@ -51,156 +52,115 @@
     <div class="app">
       <div class="banner">
         <a href="https://www16.53kf.com/webCompany.php?kf_sign=TI4NDMTU1OgxNjExMDkwNDA0NTUzMDA4NzIxODc2NzM%253D&arg=10187673&style=1">
-          <img src="img/ruhu4_1.jpg">
+          <img src="img/ruhu5_1.jpg">
         </a>
       </div>
       <div class="content" style="margin: 0;">
         <div class="form_box">
-          <form class="mui-input-group myform">
-            <p>1、您的学历（单选）<span style="color:red;">*</span></p>
-            <div class="item div">
-              <div class="mui-input-row mui-radio mui-left">
-                <label>高中及以下</label>
-                <input name="xue" type="radio" value="高中及以下" class="xue" required>
+          <form class="layui-form myform">
+            <div class="layui-form-item layui-row">
+              <div class="layui-col-xs3 name">
+                <span>您的年龄</span>
               </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label>专科</label>
-                <input name="xue" type="radio" value="专科" class="xue" required>
-              </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label>本科</label>
-                <input name="xue" type="radio" value="本科" class="xue" required>
-              </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label>本科以上</label>
-                <input name="xue" type="radio" value="本科以上" class="xue" required>
+              <div class="layui-col-xs3 inp">
+                <select name="age">
+                  <option value="">请选择</option>
+                  <option value="23岁以下">23岁以下</option>
+                  <option value="23-34岁">23-34岁</option>
+                  <option value="35-45岁">35-45岁</option>
+                  <option value="45岁以上">45岁以上</option>
+                </select>  
               </div>
             </div>
-            <p>2、您目前的年龄（单选）<span style="color:red;">*</span></p>
-            <div class="item">
-              <div class="mui-input-row mui-radio mui-left">
-                <label>23岁以下</label>
-                <input name="age" type="radio" value="23岁以下" class="age" required>
+            <div class="layui-form-item layui-row">
+              <div class="layui-col-xs3 name">
+                <span>您的学历</span>
               </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label>24-34岁</label>
-                <input name="age" type="radio" value="24-34岁" class="age" required>
-              </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label>35-45岁</label>
-                <input name="age" type="radio" value="35-45岁" class="age" required>
-              </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label>45岁以上</label>
-                <input name="age" type="radio" value="45岁以上" class="age" required>
+              <div class="layui-col-xs3 inp">
+                <select name="xue">
+                  <option value="">请选择</option>
+                  <option value="高中及以下">高中及以下</option>
+                  <option value="专科">专科</option>
+                  <option value="本科">本科</option>
+                  <option value="本科">本科以上</option>
+                </select>  
               </div>
             </div>
-            <p>3、社保年限（单选）<span style="color:red;">*</span></p>
-            <div class="item">
-              <div class="mui-input-row mui-radio mui-left">
-                <label>1-12月</label>
-                <input name="way" type="radio" value="1-12月" class="way" required>
+            <div class="layui-form-item layui-row">
+              <div class="layui-col-xs3 name">
+                <span>缴纳社保</span>
               </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label>1-4年</label>
-                <input name="way" type="radio" value="1-4年" class="way" required>
-              </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label style="font-size: 0.28rem;">4年以上</label>
-                <input name="way" type="radio" value="4年以上" class="way" required>
-              </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label>无社保</label>
-                <input name="way" type="radio" value="无社保" class="way" required>
+              <div class="layui-col-xs3 inp">
+                <select name="she">
+                  <option value="">请选择</option>
+                  <option value="1-12月">1-12月</option>
+                  <option value="1-4年">1-4年</option>
+                  <option value="4年以上">4年以上</option>
+                  <option value="无社保">无社保</option>
+                </select>  
               </div>
             </div>
-            <p>4、居住证（单选）<span style="color:red;">*</span></p>
-            <div class="item">
-              <div class="mui-input-row mui-radio mui-left">
-                <label>1年以下</label>
-                <input name="zhen" type="radio" value="1年以下" class="zhen" required>
+            <div class="layui-form-item layui-row">
+              <div class="layui-col-xs3 name">
+                <span>您的姓名</span>
               </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label>1-4年</label>
-                <input name="zhen" type="radio" value="1-4年" class="zhen" required>
-              </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label style="font-size: 0.28rem;">4年以上</label>
-                <input name="zhen" type="radio" value="4年以上" class="zhen" required>
-              </div>
-              <div class="mui-input-row mui-radio mui-left">
-                <label>无居住证</label>
-                <input name="zhen" type="radio" value="无居住证" class="zhen" required>
+              <div class="layui-col-xs3 inp">
+                <input type="text" name="username" required  class="layui-input username" lay-verify="required" placeholder="请输入" autocomplete="off">
               </div>
             </div>
-            <div class="f-line"></div>
-            <div class="inp-name">
-              <div class="name-line">
-                <input type="text" required name="username" minlength="2" class="usename" value="" placeholder="请输入您的姓名" />
+            <div class="layui-form-item layui-row">
+              <div class="layui-col-xs3 name">
+                <span>您的手机</span>
+              </div>
+              <div class="layui-col-xs3 inp">
+                <input type="text" name="userphone" required maxlength="11" class="userphone layui-input"  lay-verify="required" placeholder="请输入" autocomplete="off">
               </div>
             </div>
-            <div class="inp-name">
-              <div class="name-line">
-                <input type="text" required name="userphone" maxlength="11" class="userphone" value="" placeholder="请输入您的手机" />
-              </div>
-            </div>
-            <div class="out-box">
-              <div class="automatic cur">
-                <input type="radio" name="automatic" class="" value="" />
-              </div>
-              <span class="person">自动输入历史手机号</span>
-              <span class="getPensentbtn" style="color: #ff7113;">《个人信息授权书》</span>
-            </div>
-            <div>
-              <button type="submit" class="get_stipend">测评提交</button>
+            <div class="layui-form-item layui-row btn-box">
+             <button class="layui-btn get_stipend" >获取测评分数</button>
             </div>
           </form>
           <div class="benke">
-            <a href="https://www16.53kf.com/webCompany.php?kf_sign=TI4NDMTU1OgxNjExMDkwNDA0NTUzMDA4NzIxODc2NzM%253D&arg=10187673&style=1">
+            <!-- <a href="https://www16.53kf.com/webCompany.php?kf_sign=TI4NDMTU1OgxNjExMDkwNDA0NTUzMDA4NzIxODc2NzM%253D&arg=10187673&style=1">
               <img src="img/ruhu3_4.jpg">
-            </a>
+            </a> -->
             <div class="show-box">
               <div class="box">
                 <p>
-                  <span>陈先生&nbsp;&nbsp;</span>
+                  <span>陈*生&nbsp;&nbsp;</span>
                   <span>159****698 &nbsp;&nbsp;</span>
-                  <span>09分钟前</span>
+                  <span>2019-06-12&nbsp;21:20:14</span>
                 </p>
                 <p>
-                  <span>李先生&nbsp;&nbsp;</span>
-                  <span>159****634 &nbsp;&nbsp;</span>
-                  <span>06分钟前</span>
+                 <span>潘*人&nbsp;&nbsp;</span>
+                 <span>139****658 &nbsp;&nbsp;</span>
+                 <span>2019-06-19&nbsp;11:20:14</span>
                 </p>
                 <p>
-                  <span>王先生&nbsp;&nbsp;</span>
-                  <span>139****695 &nbsp;&nbsp;</span>
-                  <span>31分钟前</span>
+                 <span>王*文&nbsp;&nbsp;</span>
+                 <span>137****458 &nbsp;&nbsp;</span>
+                 <span>2019-06-17&nbsp;18:20:14</span>
                 </p>
                 <p>
-                  <span>离女士&nbsp;&nbsp;</span>
-                  <span>189****318 &nbsp;&nbsp;</span>
-                  <span>15分钟前</span>
+                 <span>廖*云&nbsp;&nbsp;</span>
+                 <span>139****432 &nbsp;&nbsp;</span>
+                 <span>2019-06-16&nbsp;17:20:14</span>
                 </p>
                 <p>
-                  <span>廖先生&nbsp;&nbsp;</span>
-                  <span>139****674 &nbsp;&nbsp;</span>
-                  <span>21分钟前</span>
-                </p>
-                <p>
-                  <span>潘先生&nbsp;&nbsp;</span>
-                  <span>134****612 &nbsp;&nbsp;</span>
-                  <span>11分钟前</span>
+                  <span>刘*海&nbsp;&nbsp;</span>
+                  <span>159****698 &nbsp;&nbsp;</span>
+                  <span>2019-06-20&nbsp;15:20:14</span>
                 </p>
               </div>
             </div>
           </div>
           <div class="banner">
-            <a href="https://www16.53kf.com/webCompany.php?kf_sign=TI4NDMTU1OgxNjExMDkwNDA0NTUzMDA4NzIxODc2NzM%253D&arg=10187673&style=1">
-              <img src="img/ruhu3_2.jpg">
-            </a>
+            <img src="img/ruhu5_2.jpg">
           </div>
           <div class="banner">
-           <img src="img/ruhu3_3.jpg">
+           <a href="https://www16.53kf.com/webCompany.php?kf_sign=TI4NDMTU1OgxNjExMDkwNDA0NTUzMDA4NzIxODc2NzM%253D&arg=10187673&style=1">
+             <img src="img/ruhu5_3.jpg">
+           </a>
           </div>
           
         </div>
@@ -259,6 +219,7 @@
 
     <script src="../js/jquery2.01.js"></script>
     <script src="../ydui/js/ydui.js"></script>
+    <script src="layui/layui.all.js"></script>
     <script src="../js/comment.js"></script>
     <script>
      
@@ -267,14 +228,13 @@
     
       // automatic 勾选自动输入历史手机号码
       $('.automatic').on('click', function() {
-
         if (!$(this).hasClass('cur')) {
           $(this).addClass('cur')
         } else {
           $(this).removeClass('cur')
         }
       })
-
+      
       // 个人信息弹框
       // 打开事件 关闭事件
       OpenMsg('.getPensentbtn', '.getResultModel')
@@ -292,44 +252,49 @@
          $('.get_stipend').on('click', function() {
         // 判断单选框是否勾选
         
-        var bol1 = isRadioChecked($('.xue'));
-        var bol2 = isRadioChecked($('.age'));
-        var bol3 = isRadioChecked($('.way'));
-        var bol4 = isRadioChecked($('.zhen'));
-
+       
 
         var myRegExp = MyRegExp(); //验证对象   userphone usename
-
-        var bol5 = myRegExp.isPhone($.trim($('.userphone').val()));
-
         
-        if (!bol1) {
-          dialog.alert('请勾选你最高学历！')
+        var bol5 = myRegExp.isPhone($.trim($('.userphone').val()));
+        
+        var age = $('select[name=age]').val();
+        var xue = $('select[name=xue]').val();
+        var she = $('select[name=she]').val();
+        var username = $('input[name=username]').val();
+        var userphone = $('input[name=userphone]').val();
+        
+      
+        console.log(username)
+        
+        if (!age) {
+          dialog.alert('请选择年龄！')
           return false;
         }
-        if (!bol2) {
-          dialog.alert('请勾选你的年龄！')
+        if (!xue) {
+          dialog.alert('请选择学历！')
           return false;
         }
-        if (!bol3) {
-          dialog.alert('请勾选您的社保年限！')
+        if (!she) {
+          dialog.alert('请选择社保年限！')
           return false;
         }
-        if(!bol4){
-          dialog.alert('请勾选您的居住证年限！')
+        if (!username) {
+          dialog.alert('请输入您的姓名！')
           return false;
         }
-        if (!$('.usename').val()) {
-          dialog.alert('请输入姓名！')
+        if (!userphone) {
+          dialog.alert('请输入您的手机号码！')
           return false;
         }
+        
         if (!bol5) {
           dialog.alert('请输入正确的11位手机号码！')
           return false;
         }
-
-        if (bol1 && bol2 && bol3 && bol5) {
-          console.log('可以发送验证码请求了 ！')
+        
+        
+         console.log('可以发送验证码请求了 ！')
 
           var data = {
             education: $('input[name=xue]:checked').val(),
@@ -399,8 +364,7 @@
             }
           })
 
-          return false;
-        }
+       
         return false;
       })
       

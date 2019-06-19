@@ -1,5 +1,5 @@
 @import '../../css/base';
-    
+     
 img{
   display: inline-block;
 }
@@ -63,92 +63,30 @@ a{
 .item > div {
   width: 50%;
 }
-.mui-input-group {
-  font-size: 0.3rem;
-  letter-spacing: 0.04rem;
-  color: @color2;
-  padding-top: 0.42rem;
-  padding-bottom: 0.4rem;
-  padding-left: 0.32rem;
-  padding-right: 0.32rem;
-}
+
 .myform {
-  .f-line{
-    width: 6.9rem;
-    height: 0.16rem;
-    margin: 0 auto;
-    margin-top: 0.2rem;
-   background-color: #dadada;
+  padding-top: 0.3rem;
+  width: 6.9rem;
+  margin: 0 auto;
+  font-size: 0.28rem;
+  .layui-form-item{
+    height: 0.64rem;
+    line-height: 0.64rem;
+    .name{
+      text-align: center;
+    }
+    .inp{
+      width: 70%;
+      input{
+        display: inline-block;
+        width: 98%;
+        border: 1px solid #ccc;
+        height: 0.64rem;
+      }
+    }
   }
 }
 
-.mui-input-group > p {
-  padding-left: 0.32rem;
-  padding-right: 0.32rem;
-  color: @color2;
-  font-size: 0.3rem;
-  margin-bottom: 0.2rem;
-  margin-top: 0.2rem;
-}
-.mui-input-group:before,
-.mui-input-group:after {
-  background-color: transparent;
-}
-.mui-input-row {
-  margin-bottom: 0.01rem;
-  margin-top: 0.1rem;
-}
-.mui-input-group .mui-input-row:after {
-  background-color: transparent;
-}
-.mui-radio label,.mui-radio input{
-  vertical-align: middle;
-}
-.inp-name {
-  padding-top: 0.44rem;
-  font-size: 0.3rem;
-  color: @color2;
-  padding-left: 0.3rem;
-  padding-right: 0.3rem;
-}
-.inp-name > p {
-  color: @color2;
-  font-size: 0.3rem;
-  letter-spacing: @letterSpacing;
-}
-.name-line > input {
-  display: block;
-  height: 0.67rem;
-  width: 6.28rem;
-  line-height: 0.67rem;
-  padding: 0;
-  font-size: @fontSize30;
-  padding-top: 0.26rem;
-  padding-bottom: 0.26rem;
-  border: 1px solid #ccc;
-  padding-left: 10px;
-}
-.automatic {
-  .inline-block();
-  width: 0.32rem;
-  height: 0.32rem;
-  border-radius: 0.03rem;
-  border: 1px solid #ff7113;
-  margin-left: 0.3rem;
-  font-size: 0.3rem;
-}
-.automatic > input {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.automatic.cur {
-  background: url(../img/ru_g.jpg) no-repeat 50% 50%;
-  background-size: 100% 100%;
-}
-.getPensentbtn {
-  color: #1b78ce;
-}
 .person,
 .getPensentbtn,
 .automatic {
@@ -166,8 +104,9 @@ a{
 .get_stipend {
   width: 6.4rem;
   height: 0.88rem;
-  background-color: #ff7113;
+  background-color: #4a90e2;
   margin: 0 auto;
+  display: block;
   color: #fff;
   font-size: 0.36rem;
   letter-spacing: 0.04rem;
@@ -233,7 +172,7 @@ a{
     width: 100%;
   }
   .show-box{
-    height: 1.8rem;
+    height: 0.6rem;
     padding: 0.2rem 0;
     overflow: hidden;
     position: relative;
