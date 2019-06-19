@@ -40,6 +40,7 @@ body {
   padding: 0;
   background: #fff;
   font-family: '微软雅黑';
+  color: #222;
 }
 .clearfix:after {
   content: ".";
@@ -427,4 +428,103 @@ textarea {
 .app .section3 {
   background: #f3f3f3;
   height: 757px;
+  text-align: center;
+}
+.app .section3 h2 {
+  width: 874px;
+  margin: 0 auto ;
+  padding-top: 61px;
+  font-size: 50px;
+  line-height: 52px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #222;
+}
+.app .section3 h2 span.r {
+  color: #ff0000;
+}
+.app .section3 p {
+  font-size: 18px;
+  color: #666;
+  line-height: 52px;
+}
+.app .section3 .box {
+  height: 460px;
+  margin-top: 50px;
+}
+.app .section3 .box > div {
+  width: 224px;
+  height: 458px;
+  background-color: #ffffff;
+  border: solid 1px #0972d4;
+  margin-right: 20px;
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.app .section3 .box > div img {
+  margin-top: 18px;
+  width: 102px;
+}
+.app .section3 .box > div h3 {
+  font-size: 24px;
+  color: #ef0000;
+  margin-top: 17px;
+}
+.app .section3 .box > div p {
+  line-height: 25px;
+  text-align: left;
+  font-size: 12px;
+  width: 182px;
+  height: 196px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+.app .section3 .box > div .btn {
+  margin-top: 10px;
+}
+.app .section3 .box > div .btn a {
+  display: inline-block;
+  width: 106px;
+  height: 44px;
+  line-height: 44px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #fba746;
+  font-size: 16px;
+  color: #fba746;
+}
+.app .section3 .box > div .btn a:hover {
+  background: #fba746;
+  color: #fff;
+}
+.app .section4 {
+  text-align: center;
+  height: 882px;
+}
+.app .section4 h2 {
+  font-size: 50px;
+  padding: 80px 0;
+}
+.app .section5 {
+  text-align: center;
+  background: #f9f9f9;
+  height: 936px;
+}
+.app .section6 {
+  height: 551px;
+  background: #fff;
+  text-align: center;
+}
+.app .section6 h2 {
+  width: 900px;
+  font-size: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #222;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+.app .section6 p {
+  font-size: 18px;
+  line-height: 52px;
+  color: #666;
 }
