@@ -339,6 +339,7 @@ textarea {
   top: 0;
   width: 100%;
   height: 64px;
+  z-index: 100;
 }
 .app #nav {
   width: 100%;
@@ -511,7 +512,7 @@ textarea {
   height: 936px;
 }
 .app .section6 {
-  height: 551px;
+  height: 561px;
   background: #fff;
   text-align: center;
 }
@@ -527,4 +528,484 @@ textarea {
   font-size: 18px;
   line-height: 52px;
   color: #666;
+}
+.app .section6 .box {
+  height: 250px;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
+}
+.app .section6 .box > div {
+  width: 224px;
+  height: 238px;
+  background-color: #ffffff;
+  border: solid 1px #ff0000;
+  float: left;
+  margin-right: 20px;
+}
+.app .section6 .box > div h3 {
+  width: 204px;
+  margin: 0 auto;
+  line-height: 60px;
+  font-size: 20px;
+  color: #ff0000;
+  height: 60px;
+  border-bottom: 1px dashed #bfbfbf;
+}
+.app .section6 .box > div p {
+  line-height: 25px;
+  width: 195px;
+  height: 43px;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 16px;
+  margin-top: 30px;
+}
+.app .section6 .box > div .btn {
+  padding-top: 36px;
+}
+.app .section6 .box > div .btn a {
+  display: inline-block;
+  width: 159px;
+  height: 44px;
+  line-height: 44px;
+  color: #ff0000;
+  background-color: #ffffff;
+  border: solid 1px #ff0000;
+  font-size: 16px;
+}
+.app .section6 .box > div .btn a:hover {
+  background: #ff0000;
+  color: #fff;
+}
+.app .section7 {
+  height: 1020px;
+  background: #fff;
+  text-align: center;
+}
+.app .section7 h2 {
+  width: 589px;
+  margin: 0 auto;
+  padding: 80px 0 20px 0;
+  border-bottom: 1px solid #222;
+  font-size: 50px;
+}
+.app .section7 h2 span.r {
+  color: #fa0000;
+}
+.app .section7 p {
+  line-height: 52px;
+  height: 43px;
+  font-size: 18px;
+}
+.app .section7 .box {
+  height: 690px;
+  padding-top: 53px;
+}
+.app .section7 .box > div {
+  float: left;
+}
+.app .section7 .box .left {
+  width: 632px;
+  height: 690px;
+}
+.app .section7 .box .right {
+  width: 512px;
+  height: 690px;
+  margin-left: 50px;
+  text-align: left;
+}
+.app .section7 .box .right .swiper {
+  height: 374px;
+  width: 100%;
+}
+.app .section7 .box .right .swiper p {
+  height: 54px;
+  line-height: 54px;
+  background: #ff8610;
+  color: #fff;
+  font-size: 18px;
+}
+.app .section7 .box .right .swiper .swiper-container {
+  border: solid 2px #d2d2d2;
+  height: 320px;
+  width: 100%;
+  border-top: none;
+}
+.app .section7 .box .right .swiper .swiper-container .swiper-slide {
+  height: 40px;
+  line-height: 40px;
+  color: #01163c;
+  font-size: 18px;
+}
+.app .section7 .box .right .gs h3 {
+  color: #ffa914;
+  font-size: 20px;
+  padding: 20px 0 10px 0;
+  border-bottom: 1px solid #222;
+}
+.app .section7 .box .right .gs p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #666666;
+  height: 48px;
+  width: 503px;
+  margin-top: 10px;
+}
+.app .section7 .box .right .gs .img {
+  margin-top: 20px;
+  height: 155px;
+}
+.app .section7 .box .right .gs .img img {
+  width: 512px;
+  border: 0;
+}
+.app .section8 {
+  height: 722px;
+  background-color: #e3f6ff;
+  text-align: center;
+}
+.app .section8 h2 {
+  font-size: 50px;
+  line-height: 52px;
+  padding: 80px 0 20px 0;
+  border-bottom: 1px solid #222;
+  width: 788px;
+  margin: 0 auto;
+}
+.app .section8 p {
+  font-size: 18px;
+  line-height: 52px;
+  color: #666666;
+}
+.app .section8 .box {
+  height: 201px;
+  font-size: 0;
+  margin-top: 39px;
+}
+.app .section8 .box a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.app .section8 .box > div {
+  display: inline-block;
+  font-size: 18px;
+  width: 200px;
+  height: 200px;
+}
+.app .section8 .box .bx1 {
+  background: url(../img/b1.jpg) no-repeat;
+}
+.app .section8 .box .bx1:hover {
+  background: url(../img/a1.jpg) no-repeat;
+}
+.app .section8 .box .bx2 {
+  background: url(../img/b2.jpg) no-repeat;
+}
+.app .section8 .box .bx2:hover {
+  background: url(../img/a2.jpg) no-repeat;
+}
+.app .section8 .box .bx3 {
+  background: url(../img/b3.jpg) no-repeat;
+}
+.app .section8 .box .bx3:hover {
+  background: url(../img/a3.jpg) no-repeat;
+}
+.app .section8 .box .bx4 {
+  background: url(../img/b4.jpg) no-repeat;
+}
+.app .section8 .box .bx4:hover {
+  background: url(../img/a4.jpg) no-repeat;
+}
+.app .section8 .box .bx5 {
+  background: url(../img/b5.jpg) no-repeat;
+}
+.app .section8 .box .bx5:hover {
+  background: url(../img/a5.jpg) no-repeat;
+}
+.app .section8 .box .bx6 {
+  background: url(../img/b6.jpg) no-repeat;
+}
+.app .section8 .box .bx6:hover {
+  background: url(../img/a6.jpg) no-repeat;
+}
+.app .section8 h4 {
+  font-size: 22px;
+  padding: 67px 0 48px 0;
+  font-weight: 400;
+}
+.app .section8 .btn a {
+  display: inline-block;
+  width: 238px;
+  height: 72px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  line-height: 72px;
+  font-size: 24px;
+  color: #fff;
+}
+.app .section9 {
+  height: 740px;
+  background: #fff;
+  text-align: center;
+}
+.app .section9 h2 {
+  font-size: 50px;
+  padding: 80px 0 85px 0;
+}
+.app .section9 .box {
+  position: relative;
+  height: 304px;
+  font-size: 0;
+}
+.app .section9 .box > div {
+  float: left;
+  font-size: 16px;
+  width: 278px;
+  height: 302px;
+  background-color: #ffffff;
+  border: solid 1px #ff0000;
+  margin-right: 29px;
+  position: relative;
+}
+.app .section9 .box > div span.fix {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border: 1px solid red;
+  border-radius: 64px;
+  left: 50%;
+  top: -32px;
+  margin-left: -32px;
+  font-size: 30px;
+  color: red;
+  font-style: italic;
+  font-weight: 800;
+  background: #fff;
+  line-height: 60px;
+}
+.app .section9 .box > div h3 {
+  font-size: 24px;
+  color: red;
+  padding-top: 60px;
+}
+.app .section9 .box > div p {
+  width: 181px;
+  height: 92px;
+  text-align: left;
+  color: #808080;
+  margin: 0 auto;
+  margin-top: 18px;
+  line-height: 23px;
+}
+.app .section9 .box > div p.a1 {
+  width: 154px;
+}
+.app .section9 .box > div p.a2 {
+  width: 181px;
+}
+.app .section9 .box > div p.a3 {
+  width: 139px;
+}
+.app .section9 .box > div p.a4 {
+  width: 149px;
+}
+.app .section9 .box > div .b {
+  padding-top: 30px;
+}
+.app .section9 .box > div .b a {
+  display: inline-block;
+  width: 172px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #ff0000;
+  line-height: 44px;
+  color: red;
+}
+.app .section9 .box > div .b a:hover {
+  background-color: red;
+  color: #fff;
+}
+.app .section9 .btn {
+  padding-top: 60px;
+}
+.app .section9 .btn a {
+  display: inline-block;
+  width: 238px;
+  height: 72px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  line-height: 72px;
+  color: #fff;
+  font-size: 24px;
+}
+.app .section10 {
+  height: 500px;
+  background: #fff;
+  text-align: center;
+}
+.app .section10 h2 {
+  font-size: 50px;
+  width: 774px;
+  padding: 10px 0 20px 0;
+  margin: 0 auto;
+  line-height: 52px;
+  border-bottom: 1px solid #222;
+}
+.app .section10 p.p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 9px;
+}
+.app .section10 .box {
+  font-size: 0;
+  width: 660px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+.app .section10 .box a {
+  display: inline-block;
+  width: 110px;
+  height: 36px;
+  line-height: 36px;
+  background-color: #04315b;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #ffffff;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.app .section10 .box2 p {
+  font-size: 16px;
+  color: red;
+}
+.app .section10 .box2 p.b2 {
+  font-size: 18px;
+  margin-top: 19px;
+}
+.app .section10 p.p2 {
+  margin-top: 39px;
+  font-size: 22px;
+}
+.section11 {
+  text-align: center;
+  height: 1091px;
+  background: #d3d1d1 url(../img/fg.png) no-repeat;
+}
+.section11 h2 {
+  font-size: 50px;
+  padding: 90px 0 20px 0;
+  width: 930px;
+  margin: 0 auto;
+  border-bottom: 1px solid #222;
+}
+.section11 p.a1 {
+  line-height: 26px;
+  font-size: 16px;
+  color: #222;
+}
+.section11 form {
+  width: 791px;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: left;
+  font-size: 18px;
+}
+.section11 form .f-box {
+  width: 791px;
+  height: 538px;
+  background: #fff;
+  opacity: 0.7;
+  padding-top: 60px;
+  padding-left: 72px;
+}
+.section11 form h3 {
+  margin-bottom: 18px;
+  font-size: 23px;
+}
+.section11 form .item {
+  margin-bottom: 38px;
+}
+.section11 form .item input {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+.section11 form .item input,
+.section11 form .item span {
+  vertical-align: middle;
+}
+.section11 form .inp {
+  margin-top: 20px;
+}
+.section11 form .inp input {
+  display: inline-block;
+  width: 620px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: solid 1px #bfbfbf;
+  font-size: 18px;
+  padding-left: 10px;
+  line-height: 44px;
+}
+.section11 form .btn {
+  text-align: center;
+  padding: 51px 0 45px 0;
+}
+.section11 form .btn button {
+  width: 238px;
+  height: 72px;
+  background-color: #ff0000;
+  border-radius: 5px;
+  color: #fff;
+  border: 0;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+}
+.section11 p.f {
+  font-size: 22px;
+  color: #fb0000;
+}
+.footer .w {
+  height: 92px;
+  background: #fff;
+}
+.footer .copyRight {
+  height: 309px;
+  background-color: #000e2b;
+}
+.footer .copyRight .content {
+  margin: 0 auto;
+  width: 1200px;
+  height: 309px;
+  position: relative;
+  color: #fff;
+}
+.footer .copyRight .content img.er {
+  position: absolute;
+  right: 0;
+  top: 50px;
+}
+.footer .copyRight .content p.a {
+  line-height: 24px;
+  padding-top: 77px;
+}
+.footer .copyRight .content p.a a {
+  color: #fff;
+  display: inline-block;
+  margin-right: 20px;
+}
+.footer .copyRight .content p.a a:hover {
+  color: red;
+}
+.footer .copyRight .content p.copy {
+  line-height: 52px;
 }

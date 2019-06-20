@@ -73,8 +73,14 @@
   <script>
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 5,
-      spaceBetween: 50,
+      spaceBetween: 10,
       // init: false,
+      speed: 900,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+      },
+      loop:true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -82,15 +88,15 @@
       breakpoints: {
         1024: {
           slidesPerView: 4,
-          spaceBetween: 40,
+          spaceBetween: 10,
         },
         768: {
           slidesPerView: 3,
-          spaceBetween: 30,
+          spaceBetween: 10,
         },
         640: {
           slidesPerView: 2,
-          spaceBetween: 20,
+          spaceBetween: 10,
         },
         320: {
           slidesPerView: 1,
