@@ -270,8 +270,138 @@ a {
   height: 100%;
   line-height: 0.64rem;
   font-size: 0.2rem;
+  margin: 0;
+  padding: 0;
 }
 #nav a:hover {
   background-color: #19275f;
   color: #fffc20;
+}
+.setion2 {
+  height: 11.46rem;
+  background-color: #f7f7f7;
+  text-align: center;
+}
+.setion2 h2 {
+  width: 6.9rem;
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  padding: 0.69rem 0 0.2rem 0;
+  border-bottom: 1px solid #222;
+  margin: 0 auto;
+}
+.setion2 p {
+  font-size: 0.24rem;
+  line-height: 0.38rem;
+}
+.setion2 .box {
+  width: 6.9rem;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 0.38rem;
+}
+.setion2 .box > div {
+  width: 3.3rem;
+  height: 4.16rem;
+  background-color: #ffffff;
+  margin-bottom: 0.3rem;
+  font-size: 0.24rem;
+}
+.setion2 .box > div .span {
+  margin-top: 0.3rem;
+}
+.setion2 .box > div .span span {
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  font-weight: 800;
+  font-style: italic;
+  color: #886807;
+}
+.setion2 .box > div h4 {
+  font-size: 0.28rem;
+  color: #d54107;
+  line-height: 0.32rem;
+  margin-top: 0.23rem;
+}
+.setion2 .box > div p {
+  font-size: 0.24rem;
+  color: #222;
+  line-height: 0.38rem;
+  width: 2.97rem;
+  height: 1.37rem;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 0.2rem;
+}
+.setion2 .box > div .btn {
+  margin-top: 0.38rem;
+}
+.setion2 .box > div .btn a {
+  display: inline-block;
+  width: 2.65rem;
+  height: 0.56rem;
+  background-color: #ffffff;
+  border-radius: 0.03rem;
+  border: solid 0.01rem #fba746;
+  line-height: 0.55rem;
+  color: #fba746;
+}
+.setion2 .box > div .btn a:hover {
+  background-color: #fba746;
+  color: #fff;
+}
+.setion3 {
+  text-align: center;
+  font-size: 0.22rem;
+  height: 14.65rem;
+}
+.setion3 h2 {
+  width: 6.9rem;
+  margin: 0 auto;
+  line-height: 0.52rem;
+  padding-top: 0.29rem;
+  padding-bottom: 0.1rem;
+  border-bottom: 1px solid #222;
+}
+.setion3 p {
+  line-height: 0.38rem;
+  font-size: 0.24rem;
+  margin-top: 0.2rem;
+}
+.setion3 .box {
+  width: 6.9rem;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 0.38rem;
+}
+.setion3 .box > div {
+  width: 3.35rem;
+  height: 5.76rem;
+  background-color: #ffffff;
+  border: solid 0.01rem #0972d4;
+  margin-bottom: 0.2rem;
+}
+.setion3 .box > div img {
+  width: ;
+}
+.setion3 .box > div h4 {
+  font-size: 0.28rem;
+  color: #ef0000;
+  line-height: 0.52rem;
+  margin-top: 0.18rem;
+}
+.setion3 .box > div p {
+  text-align: left;
+  width: 3.05rem;
+  margin: 0 auto;
+  height: 2.79rem;
+  color: #7f7f7f;
+  line-height: 0.32rem;
+  margin-top: 0.19rem;
 }

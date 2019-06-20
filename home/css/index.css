@@ -221,7 +221,7 @@ textarea {
   width: 524px;
   height: 127px;
   margin: 0 auto;
-  background: url(../img/jx.png) no-repeat 50% 50%;
+  background: url(../img/jx.jpg) no-repeat 50% 50%;
   line-height: 127px;
   font-size: 60px;
 }
@@ -232,7 +232,7 @@ textarea {
   height: 100%;
 }
 .app .section1 .content-box .slide2 {
-  background: url(../img/2.png) no-repeat;
+  background: url(../img/2.jpg) no-repeat;
   font-size: 50px;
   text-align: center;
   padding-top: 230px;
@@ -292,7 +292,8 @@ textarea {
   background: red;
 }
 .app .section1 .content-box .slide3 {
-  background: url(../img/3.png) no-repeat;
+  background: url(../img/3.jpg) no-repeat;
+  background-size: 100% 100%;
   position: relative;
   color: #fff;
 }
