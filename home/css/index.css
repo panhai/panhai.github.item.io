@@ -199,9 +199,10 @@ textarea {
   z-index: 10;
 }
 .app .section1 .content-box .slide1 {
-  background: url(../img/1.png) no-repeat;
+  background: url(../img/1.jpg) no-repeat;
   padding-top: 180px;
   position: relative;
+  background-size: 100% 100%;
 }
 .app .section1 .content-box .slide1 p {
   font-size: 78px;
@@ -221,7 +222,7 @@ textarea {
   width: 524px;
   height: 127px;
   margin: 0 auto;
-  background: url(../img/jx.jpg) no-repeat 50% 50%;
+  background: url(../img/jx.png) no-repeat 50% 50%;
   line-height: 127px;
   font-size: 60px;
 }
@@ -237,6 +238,7 @@ textarea {
   text-align: center;
   padding-top: 230px;
   position: relative;
+  background-size: 100% 100%;
 }
 .app .section1 .content-box .slide2 .m {
   width: 100%;
