@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>客户数据</title>
+    <link rel="stylesheet" type="text/css" href="css/easyui.css"/>
+    <script src="js/jquery2.01.js"></script>
+    <script src="js/jquery.easyui.min.js"></script>
+    <style type="text/css">
+    	table{
+        text-align: center !important;
+      }
+    </style>
+	</head>
+	<body>
+    <div class="app">
+      <h2 style="text-align: center;">客户数据</h2>
+      <div class="data-table">
+        <table class="easyui-datagrid" id="tt" rownumbers="false" data-options="url:'http://www.ruhubao.net/data/customer/getCustomers',fitColumns:true,singleSelect:false,method:'get',loadMsg:'数据加载中...',
+                pagination:true,selectOnCheck:true,selectOnCheck:true,checkOnSelect:false,fixed:false">
+          <thead>
+            <tr>
+              <th data-options=" field: 'ck',checkbox:true"></th>
+              <th data-options="field: 'id' " sortable="true">用户Id</th>
+              <th data-options="field: 'name' ">用户姓名</th>
+              <th data-options="field: 'telPhone',align: 'center' ">用户手机</th>
+              <th data-options="field: 'ageGroups' ">年段</th>
+              <th data-options="field: 'ruhuReason' ">入户原因</th>
+              <th data-options="field: 'yearsSocial' ">社保年限</th>
+              <th data-options="field: 'livePermitYears' ">居住证年限</th>
+              <th data-options="field: 'education' ">学历</th>
+              <th data-options="field: 'major' ">专业</th>
+              <th data-options="field: 'sourceLink' ">链接</th>
+              <th data-options="field: 'marriage' ">婚姻状况</th>
+              <th data-options="field: 'birthControl' ">是否违反计生政策</th>
+              <th data-options="field: 'linkmanId' ">联系人</th>
+              <th data-options="field: 'createUser' ">创建人</th>
+              <th data-options="field: 'areaId' ">所属校区</th>
+              <th data-options="field: 'haveLaborContract' ">有无劳动合同</th>
+              <th data-options="field: 'status',align: 'center' " >状态</th>
+              <th data-options="field: 'remark' ">备注</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+	</body>
+</html>
